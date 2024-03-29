@@ -1,0 +1,41 @@
+    menu:
+      main:
+        - weight: 1
+          name: Leagues
+          hasChildren: true
+        - parent: Leagues
+          name: teacher
+          url: teacher/
+        - parent: Leagues
+          name: notice
+          url: notice/
+        - parent: Leagues
+          name: event
+          url: event/
+        - parent: Leagues
+          name: scholarship
+          url: scholarship/
+        - parent: Leagues
+          name: research
+          url: research/
+        - name: News
+          url: course/
+          weight: 2
+        - name: About
+          url: about/
+          weight: 3
+        - name: Contact
+          url: contact/
+          weight: 4
+        - name: Portal
+          url: blog/
+          weight: 5       
+      footer:
+        - name: teacher
+          url: teacher/
+        - name: notice
+          url: notice/
+        - name: event
+          url: event/
+        - name: scholarship
+          url: scholarship/

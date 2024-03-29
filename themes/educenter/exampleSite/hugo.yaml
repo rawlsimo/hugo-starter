@@ -1,0 +1,205 @@
+baseURL: 'https://demo.gethugothemes.com/educenter/site/'
+title: Educenter | hugo education template
+theme: educenter
+timeZone: America/New_York
+paginate: 6
+summaryLength: 10
+googleAnalytics: UA-123456-78
+disqusShortname: themefisher-template
+disableLanguages: [fr]
+hasCJKLanguage: false
+build:
+  noJSConfigInAssets: false
+  useResourceCacheWhen: fallback
+  buildStats:
+    enable: true
+  cachebusters:
+    - source: assets/.*\.(js|ts|jsx|tsx)
+      target: (js|scripts|javascript)
+    - source: assets/.*\.(css|sass|scss)$
+      target: (css|styles|scss|sass)
+    - source: assets/.*\.(.*)$
+      target: $1
+outputs:
+  home:
+    - HTML
+    - RSS
+imaging:
+  quality: 90
+  resampleFilter: lanczos
+caches:
+  images:
+    dir: ':resourceDir/_gen'
+    maxAge: 720h
+  assets:
+    dir: ':resourceDir/_gen'
+    maxAge: 720h
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  plugins:
+    css:
+      - link: plugins/bootstrap/bootstrap.min.css
+      - link: plugins/slick/slick.css
+      - link: plugins/animate/animate.css
+      - link: plugins/venobox/venobox.css
+      - link: plugins/themify-icons/themify-icons.css
+    js:
+      - link: plugins/jQuery/jquery.min.js
+      - link: plugins/bootstrap/bootstrap.min.js
+      - link: plugins/slick/slick.min.js
+      - link: plugins/venobox/venobox.min.js
+      - link: plugins/filterizr/jquery.filterizr.min.js
+      - link: plugins/google-map/gmap.js
+  logo: images/logo.png
+  description: This is meta description
+  author: Themefisher
+  address: 9567 Turner Trace Apt. BC C3G8A4
+  mobile: '+211234565523'
+  email: info@educenter.com
+  contact_form_action: '#'
+  google_analitycs_id: ''
+  top_header: true
+  preloader:
+    enable: true
+    preloader: images/preloader.gif
+  subscription:
+    enable: true
+    mailchimp_form_action: >-
+      https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074
+    mailchimp_form_name: b_463ee871f45d2d93748e77cad_a0a2c6d074
+  map:
+    enable: true
+    gmap_api: >-
+      https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places
+    map_latitude: '51.5223477'
+    map_longitude: '-0.1622023'
+    map_marker: images/marker.png
+  cookies:
+    enable: true
+    expire_days: 2
+  social:
+    - title: facebook
+      icon: ti-facebook
+      link: '#'
+    - title: twitter
+      icon: ti-twitter-alt
+      link: '#'
+    - title: instagram
+      icon: ti-instagram
+      link: '#'
+    - title: github
+      icon: ti-github
+      link: '#'
+    - title: linkedin
+      icon: ti-linkedin
+      link: '#'
+Languages:
+  en:
+    languageName: En
+    languageCode: en-us
+    contentDir: content/english
+    weight: 1
+    params:
+      home: Home
+      copyright: >-
+        Copyright &copy; 2021 a hugo theme by
+        [Themefisher](https://themefisher.com/hugo-themes/)
+    menu:
+      main:
+        - name: About
+          url: about/
+          weight: 1
+        - name: course
+          url: course/
+          weight: 2
+        - weight: 3
+          name: Pages
+          hasChildren: true
+        - parent: Pages
+          name: teacher
+          url: teacher/
+        - parent: Pages
+          name: notice
+          url: notice/
+        - parent: Pages
+          name: event
+          url: event/
+        - parent: Pages
+          name: scholarship
+          url: scholarship/
+        - parent: Pages
+          name: research
+          url: research/
+        - name: blog
+          url: blog/
+          weight: 4
+        - name: Contact
+          url: contact/
+          weight: 5
+      footer:
+        - name: teacher
+          url: teacher/
+        - name: notice
+          url: notice/
+        - name: event
+          url: event/
+        - name: scholarship
+          url: scholarship/
+        - name: research
+          url: research/
+  fr:
+    languageName: Fr
+    languageCode: fr-fr
+    contentDir: content/french
+    weight: 2
+    params:
+      home: Accueil
+      copyright: >-
+        Copyright &copy; 2021 a hugo theme by
+        [Themefisher](https://themefisher.com/hugo-themes/)
+    menu:
+      main:
+        - name: À propos
+          url: about/
+          weight: 1
+        - name: Cours
+          url: course/
+          weight: 2
+        - weight: 3
+          name: Pages
+          hasChildren: true
+        - parent: Pages
+          name: teacher
+          url: teacher/
+        - parent: Pages
+          name: notice
+          url: notice/
+        - parent: Pages
+          name: Évènement
+          url: event/
+        - parent: Pages
+          name: Cursus
+          url: scholarship/
+        - parent: Pages
+          name: research
+          url: research/
+        - name: blog
+          url: blog/
+          weight: 4
+        - name: Contact
+          url: contact/
+          weight: 5
+      footer:
+        - name: teacher
+          url: teacher/
+        - name: notice
+          url: notice/
+        - name: event
+          url: event/
+        - name: scholarship
+          url: scholarship/
+        - name: research
+          url: research/
